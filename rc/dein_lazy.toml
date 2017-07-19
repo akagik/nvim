@@ -1,0 +1,24 @@
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_source = 'call deoplete#enable()'
+on_event = 'InsertEnter'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_source = 'call kohei#hook#denite#hook_source()'
+on_map = ['<Space>F', '<Space>b']
+
+[[plugins]]
+repo = 'OmniSharp/omnisharp-vim'
+hook_source = 'call kohei#hook#OmniSharp#hook_source()'
+on_ft = [ 'cs', 'csi', 'csx' ]
+depends = ['deoplete.nvim', 'vim-dispatch', 'syntastic']
+
+[[plugins]]
+repo = 'tpope/vim-dispatch'
+on_ft = [ 'cs', 'csi', 'csx' ]
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+hook_source = 'call kohei#hook#syntastic#hook_source()'
+on_ft = [ 'cs' ]
