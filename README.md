@@ -24,6 +24,12 @@ nvim を起動して
 :UpdateRemotePlugins
 を実行して、nvim を再起動したら動いた
 
+# For denite.nvim
+text search program の ag をインストール.
+```bash
+brew install ag
+```
+
 # omnisharp のビルド
 サブモジュールをアップデートした後, server ディレクトリ下で xbuild を実行.
 

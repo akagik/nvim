@@ -133,4 +133,9 @@ function! kohei#hook#OmniSharp#hook_source() abort
   function! s:my_cr_function() abort
     return deoplete#close_popup() . "\<CR>"
   endfunction
+
+	" Define Denite alias
+	call denite#custom#alias('source', 'file_rec/cs', 'file_rec')
+	call denite#custom#var('file_rec/cs', 'command', ['ag', '-g', '.cs$'])
+  nnoremap <leader>F :Denite file_rec/cs<CR>
 endfunction

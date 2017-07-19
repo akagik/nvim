@@ -12,7 +12,7 @@ on_map = ['<Space>F', '<Space>b']
 repo = 'OmniSharp/omnisharp-vim'
 hook_source = 'call kohei#hook#OmniSharp#hook_source()'
 on_ft = [ 'cs', 'csi', 'csx' ]
-depends = ['deoplete.nvim', 'vim-dispatch', 'syntastic']
+depends = ['denite.nvim', 'deoplete.nvim', 'vim-dispatch', 'syntastic']
 
 [[plugins]]
 repo = 'tpope/vim-dispatch'
