@@ -1,4 +1,10 @@
 # Install
+dein.vim submodule のアップデート.
+
+```bash
+git submodule update --init --update
+```
+
 neovim をインストール.
 
 ```bash
