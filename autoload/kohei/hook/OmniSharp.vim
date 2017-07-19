@@ -41,7 +41,7 @@ function! kohei#hook#OmniSharp#hook_source() abort
       " Builds can also run asynchronously with vim-dispatch installed
       autocmd FileType cs nnoremap <leader>b :wa!<cr>:OmniSharpBuildAsync<cr>
       " automatic syntax check on events (TextChanged requires Vim 7.4)
-      autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
+"      autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
 
       " Automatically add new cs files to the nearest project on save
       autocmd BufWritePost *.cs call OmniSharp#AddToProject()
@@ -51,6 +51,8 @@ function! kohei#hook#OmniSharp#hook_source() abort
 
       "The following commands are contextual, based on the current cursor position.
 
+      autocmd FileType cs nnoremap <leader>S :SyntasticCheck<cr>
+      autocmd FileType cs nnoremap <leader>E :Errors<cr>
       autocmd FileType cs nnoremap <leader>dd :OmniSharpGotoDefinition<cr>
       autocmd FileType cs nnoremap <leader>fi :OmniSharpFindImplementations<cr>
       autocmd FileType cs nnoremap <leader>ft :OmniSharpFindType<cr>
@@ -120,19 +122,6 @@ function! kohei#hook#OmniSharp#hook_source() abort
 
   " Use smartcase.
   let g:deoplete#enable_smart_case = 1
-
-  " <TAB>: completion.
-  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-  inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
-  " <C-h>, <BS>: close popup and delete backword char.
-  inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
-  inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
-
-  " <CR>: close popup and save indent.
-  inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-  function! s:my_cr_function() abort
-    return deoplete#close_popup() . "\<CR>"
-  endfunction
 
 	" Define Denite alias
 	call denite#custom#alias('source', 'file_rec/cs', 'file_rec')

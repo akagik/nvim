@@ -1,12 +1,12 @@
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-hook_source = 'call deoplete#enable()'
+hook_source = 'call kohei#hook#deoplete#hook_source()'
 on_event = 'InsertEnter'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_source = 'call kohei#hook#denite#hook_source()'
-on_map = ['<Space>F', '<Space>b']
+on_map = ['<Space>F', '<Space>N', '<Space>G', '<Space>B']
 
 [[plugins]]
 repo = 'OmniSharp/omnisharp-vim'
