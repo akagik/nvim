@@ -1,7 +1,11 @@
 # Install
-neovim をインストール
+neovim をインストール.
+
+```bash
 pip install neovim
 pip3 install neovim
+```
+
 pyenv 環境を使って python2 と python3 の path をrc/settings.vim で指定する必要がある.
 
 ```vim
@@ -15,5 +19,10 @@ nvim を起動して
 を実行して、nvim を再起動したら動いた
 
 # omnisharp のビルド
+サブモジュールをアップデートした後, server ディレクトリ下で xbuild を実行.
+
+```bash
 git submodule update --init --recursive
-server ディレクトリ下で xbuild を実行
+cd server
+xbuild
+```
