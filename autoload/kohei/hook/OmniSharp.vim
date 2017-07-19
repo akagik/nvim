@@ -124,7 +124,10 @@ function! kohei#hook#OmniSharp#hook_source() abort
   let g:deoplete#enable_smart_case = 1
 
 	" Define Denite alias
-	call denite#custom#alias('source', 'file_rec/cs', 'file_rec')
-	call denite#custom#var('file_rec/cs', 'command', ['ag', '-g', '.cs$'])
+  " TODO 先に denite を読み込むとここが上手く反映されない
+  " 仕方がないから、とりあえず denite.vim のほうに書いとく...
+  "	call denite#custom#alias('source', 'file_rec/cs', 'file_rec')
+  "	call denite#custom#var('file_rec/cs', 'command', ['ag', '-g', '.cs$'])
+
   nnoremap <leader>F :Denite file_rec/cs<CR>
 endfunction

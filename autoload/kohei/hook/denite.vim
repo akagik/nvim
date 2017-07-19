@@ -25,6 +25,9 @@ function! kohei#hook#denite#hook_source() abort
 	call denite#custom#var('file_rec/git', 'command',
 	      \ ['git', 'ls-files', '-co', '--exclude-standard'])
 
+	call denite#custom#alias('source', 'file_rec/cs', 'file_rec')
+	call denite#custom#var('file_rec/cs', 'command', ['ag', '-g', '.cs$'])
+
 	" Change ignore_globs
   " TODO うまく反映されてない
 	call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
@@ -35,9 +38,9 @@ function! kohei#hook#denite#hook_source() abort
     let s:newfilename = input('new file name:')
     let s:newpath = a:context['targets'][0]['action__path'] . '/' . s:newfilename
     execute('e ' . s:newpath)
-"    call denite#util#print_warning("File already exists!")
   endfunction
 
 	" Custom action
 	call denite#custom#action('directory', 'new', {context -> s:open_newfile(context)})
+
 endfunction
