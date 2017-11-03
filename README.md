@@ -2,7 +2,7 @@
 dein.vim submodule のアップデート.
 
 ```bash
-git submodule update --init --update
+git submodule update --init --recursive
 ```
 
 neovim をインストール.
