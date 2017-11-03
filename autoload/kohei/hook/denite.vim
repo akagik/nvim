@@ -1,6 +1,7 @@
 function! kohei#hook#denite#hook_source() abort
   echo "source denite"
   nnoremap <leader>B :Denite buffer<CR>
+  nnoremap <leader>f :Denite file_rec<CR>
   nnoremap <leader>F :Denite file_rec/git<CR>
   nnoremap <leader>G :Denite -auto-preview grep<CR>
   nnoremap <leader>N :Denite directory_rec -default-action=new<CR>
