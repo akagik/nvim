@@ -1,6 +1,6 @@
 " pyevn の Python へのパスを指定
-let g:python_host_prog = $PYENV_ROOT . '/shims/python'
-let g:python3_host_prog = $PYENV_ROOT . '/shims/python3'
+"let g:python_host_prog = $PYENV_ROOT . '/shims/python'
+"let g:python3_host_prog = $PYENV_ROOT . '/shims/python3'
 
 set clipboard+=unnamedplus " クリップボードを有効にする
 
