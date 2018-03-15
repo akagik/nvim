@@ -1,5 +1,6 @@
 au BufRead,BufNewFile *.scpt set filetype=scpt
 au BufRead,BufNewFile *.toml set filetype=vim
+au BufRead,BufNewFile *.shader set filetype=c
 
 au BufRead,BufNewFile .zshrc set filetype=zsh
 au BufRead,BufNewFile .bashrc set filetype=sh
