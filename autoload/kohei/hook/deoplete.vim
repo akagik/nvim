@@ -1,7 +1,13 @@
 function! kohei#hook#deoplete#hook_source() abort
   echo "source deoplete"
   
-  call deoplete#enable()
+"  call deoplete#enable()
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+  let g:deoplete#enable_at_startup = 1
 
   " Key Mapping.
   " <TAB>: completion.
