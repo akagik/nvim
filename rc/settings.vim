@@ -75,3 +75,5 @@ inoremap <Down> <ESC><C-w>j
 inoremap <C-^> <ESC><C-^>
 
 inoremap <silent> jj <ESC>
+
+nnoremap <C-P> :bn<CR>
