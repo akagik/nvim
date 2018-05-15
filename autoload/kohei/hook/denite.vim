@@ -5,6 +5,7 @@ function! kohei#hook#denite#hook_source() abort
   nnoremap <leader>F :Denite file_rec/git<CR>
   nnoremap <leader>G :Denite -auto-preview grep<CR>
   nnoremap <leader>N :Denite directory_rec -default-action=new<CR>
+  nnoremap <leader><leader> :Denite -resume<CR>
 
   " custom map in denite
 	call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')

@@ -6,7 +6,7 @@ on_event = 'InsertEnter'
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_source = 'call kohei#hook#denite#hook_source()'
-on_map = ['<Space>F', '<Space>N', '<Space>G', '<Space>b']
+on_map = ['<Space>f', '<Space>F', '<Space>N', '<Space>G', '<Space>b', '<Space><Space>']
 
 [[plugins]]
 repo = 'tpope/vim-dispatch'
