@@ -77,3 +77,7 @@ inoremap <C-^> <ESC><C-^>
 inoremap <silent> jj <ESC>
 
 nnoremap <C-P> :bn<CR>
+
+" color settings
+hi Comment ctermfg=blue
+hi Search term=reverse ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
