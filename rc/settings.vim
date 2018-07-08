@@ -79,6 +79,10 @@ inoremap <silent> kk <ESC>
 
 nnoremap <C-P> :bn<CR>
 
+" 印刷の設定
+set printoptions=syntax:y,number:y
+
 " color settings
 hi Comment ctermfg=blue
 hi Search term=reverse ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
+hi Directory cterm=NONE ctermfg=blue ctermbg=NONE
