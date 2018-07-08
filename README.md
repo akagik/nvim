@@ -19,6 +19,11 @@ let g:python_host_prog = $PYENV_ROOT . '/shims/python'
 let g:python3_host_prog = $PYENV_ROOT . '/shims/python3'
 ```
 
+なにがおかしいか分からないときは以下のコマンドを実行する
+```
+:checkhealth
+```
+
 # Shougo's plugins
 nvim を起動して
 :UpdateRemotePlugins
