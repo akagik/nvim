@@ -2,17 +2,16 @@
 if empty($PYENV_ROOT)
   if has('win32')
   elseif has('mac')
-    let g:python_host_prog = '/usr/bin/python'
+    let g:python_host_prog = '/usr/local/bin/python'
     let g:python3_host_prog = '/usr/local/bin/python3'
   else
-    let g:python_host_prog = '/usr/bin/python'
-    let g:python3_host_prog = '/usr/bin/python3'
+    let g:python_host_prog = '/usr/local/bin/python'
+    let g:python3_host_prog = '/usr/local/bin/python3'
   endif
 else
   let g:python_host_prog = $PYENV_ROOT . '/shims/python'
   let g:python3_host_prog = $PYENV_ROOT . '/shims/python3'
 endif
-
 
 set clipboard+=unnamedplus " クリップボードを有効にする
 

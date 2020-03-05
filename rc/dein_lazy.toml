@@ -16,3 +16,8 @@ on_ft = [ 'cs', 'csi', 'csx' ]
 repo = 'vim-syntastic/syntastic'
 hook_source = 'call kohei#hook#syntastic#hook_source()'
 on_ft = [ 'cs' ]
+
+#[[plugins]]
+#repo = 'OmniSharp/omnisharp-vim'
+#hook_source = 'call kohei#hook#OmniSharp#hook_source()'
+#on_ft = [ 'cs' ]

@@ -1,5 +1,9 @@
 function! kohei#hook#OmniSharp#hook_source() abort
-  echo "source OmniSharp"
+  let g:OmniSharp_server_path = '/Users/kohei/Dependencies/omnisharp.http-osx/omnisharp/OmniSharp.exe'
+  let g:OmniSharp_server_use_mono = 1
+
+  let g:OmniSharp_stop_server = 1
+  let g:OmniSharp_start_server = 0
 
   "Set the type lookup function to use the preview window instead of the status line
   "let g:OmniSharp_typeLookupInPreview = 1
@@ -27,7 +31,8 @@ function! kohei#hook#OmniSharp#hook_source() abort
   set splitbelow
 
   " Get Code Issues and syntax errors
-  let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
+  let g:syntastic_cs_checkers = ['code_checker']
+
   " If you are using the omnisharp-roslyn backend, use the following
   " let g:syntastic_cs_checkers = ['code_checker']
   augroup omnisharp_commands
@@ -119,9 +124,10 @@ function! kohei#hook#OmniSharp#hook_source() abort
 
 "  let g:deoplete#keyword_patterns = {}
 "  let g:deoplete#keyword_patterns.clojure = '[\w!$%&*+/:<=>?@\^_~\-\.]*'
-
   " Use smartcase.
   let g:deoplete#enable_smart_case = 1
+
+  let g:OmniSharp_selector_ui = 'denite'
 
 	" Define Denite alias
   " TODO 先に denite を読み込むとここが上手く反映されない
