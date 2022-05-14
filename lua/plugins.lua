@@ -8,5 +8,12 @@ require'packer'.startup(function()
   use'tpope/vim-surround'
   use'tpope/vim-fugitive'
   use'tpope/vim-repeat'
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
+  use "neovim/nvim-lspconfig"
+  use "williamboman/nvim-lsp-installer"
 end)
+
